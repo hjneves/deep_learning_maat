@@ -14,17 +14,20 @@ Para executar os comandos indicados nestas instruções devera usar um terminal
 - Em Windows usar o 'cmd'
 
 ## FloydHub account
-Para a execução dos modelos de deep learning vamos usar a plataforma ![Floydhub](https://www.floydhub.com). A plataforma FloydHub disponibiliza acesso a hardware e software pré-configurado para a execução de modelos de deep learning.
-Deverão criar uma conta ![aqui](https://www.floydhub.com/signup)
+Para a execução dos modelos de deep learning vamos usar a plataforma [Floydhub](https://www.floydhub.com). A plataforma *FloydHub* disponibiliza um acesso a hardware e software pré-configurado para a execução de modelos de deep learning.
+Deverão criar uma conta [aqui](https://www.floydhub.com/signup)
 
 
 ## Git
-Git é uma ferramenta de gestão de versões de projectos que vai utilizada para garantir a sincronização dos ficheiros de imagens que vamos usar e produzir.
+Git é uma ferramenta de gestão de versões de projectos que vai ser utilizada para garantir a sincronização dos ficheiros de imagens que vamos usar e produzir.
 
 Verifique se já tens o *git* instalado através do seguinte comando `git --version`: 
 
 ![](https://github.com/hjneves/deep_learning_maat/blob/master/readme/Screen%20Shot%202019-12-04%20at%2010.50.32.png)
 
+Se ainda não tem o *git* intalado pode efectar a sua instalação:
+- Em [Windows](https://git-scm.com/download/win)
+- Em [macOS](https://git-scm.com/download/mac)
 
 ## Python 2 e PIP
 O python é a ferramenta que dá suporte ao treino e aplicação dos modelos de redes neuronais quevão ser a base da criação artistica sobre as fotografias utilizadas.

@@ -30,13 +30,14 @@ Se ainda não tem o *git* intalado pode efectar a sua instalação:
 - Em [macOS](https://git-scm.com/download/mac)
 
 ## Python 2 e PIP
-O python é a ferramenta que dá suporte ao treino e aplicação dos modelos de redes neuronais quevão ser a base da criação artistica sobre as fotografias utilizadas.
+O python é a ferramenta que dá suporte ao treino e aplicação dos modelos de redes neuronais que vão ser a base da criação artistica sobre as fotografias utilizadas.
 
 Verifique qse já tem o *python* intaladas através do seguinte comando `python -V`
 O PIP é uma ferramenta de gestão de pacotes do python. Se o python já estiver instalado o PIP também já deverá estar. Pode verificar a versão corrente do pip através do comando `pip -V`
 
 ![](https://github.com/hjneves/deep_learning_maat/blob/master/readme/Screen%20Shot%202019-12-05%20at%2018.07.17.png)
-Caso não tenha intalado, pode efectuar a instalação [aqui](https://www.python.org/downloads/release/python-2717/)
+
+Caso não tenha *python* instalado, pode efectuar a sua instalação [aqui](https://www.python.org/downloads/release/python-2717/)
 
 ## VirtualEnv
 
@@ -44,7 +45,10 @@ O virtualenv é um ambiente sandbox que permite a utilização de um conjunto de
 - Instalação do virtualenv: `sudo pip install virtualenv`
 - Criar directoria de trabalho: `virtualenv ./floyd`
 - Activação do ambiente: `source ./floyd/bin/activate`
-- No final deveraNow we have (floyd) prepended on the terminal. 
+- No final deveráo ter prefixado na linha de comando do terminal a palavra `(floyd)`. 
+
+![](https://github.com/hjneves/deep_learning_maat/blob/master/readme/Screen%20Shot%202019-12-05%20at%2018.59.04.png)
+
 - Instalar o floyd-cli: `pip install -U floyd-cli`
 
 

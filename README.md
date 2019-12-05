@@ -21,7 +21,7 @@ Deverão criar uma conta [aqui](https://www.floydhub.com/signup)
 ## Git
 Git é uma ferramenta de gestão de versões de projectos que vai ser utilizada para garantir a sincronização dos ficheiros de imagens que vamos usar e produzir.
 
-Verifique se já tens o *git* instalado através do seguinte comando `git --version`: 
+Verifique se já tem o *git* instalado através do seguinte comando `git --version`: 
 
 ![](https://github.com/hjneves/deep_learning_maat/blob/master/readme/Screen%20Shot%202019-12-04%20at%2010.50.32.png)
 
@@ -32,7 +32,7 @@ Se ainda não tem o *git* intalado pode efectar a sua instalação:
 ## Python 2 e PIP
 O python é a ferramenta que dá suporte ao treino e aplicação dos modelos de redes neuronais que vão ser a base da criação artistica sobre as fotografias utilizadas.
 
-Verifique qse já tem o *python* intaladas através do seguinte comando `python -V`
+Verifique que já tem o *python* intalado através do seguinte comando `python -V`
 O PIP é uma ferramenta de gestão de pacotes do python. Se o python já estiver instalado o PIP também já deverá estar. Pode verificar a versão corrente do pip através do comando `pip -V`
 
 ![](https://github.com/hjneves/deep_learning_maat/blob/master/readme/Screen%20Shot%202019-12-05%20at%2018.07.17.png)

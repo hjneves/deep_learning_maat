@@ -52,9 +52,9 @@ O virtualenv é um ambiente sandbox que permite a utilização de um conjunto de
 - Instalar o floyd-cli: `pip install -U floyd-cli`
 
 ## FloydHub commands
-floyd run --env tensorflow-0.12:py2 \
-  --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models "python evaluate.py \
-  --allow-different-dimensions  \
-  --checkpoint /models/wave.ckpt \
-  --in-path ./images/ \
+floyd run --env tensorflow-0.12:py2 \\
+  --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models "python evaluate.py \\
+  --allow-different-dimensions  \\
+  --checkpoint /models/wave.ckpt \\
+  --in-path ./images/ \\
   --out-path ./output/"

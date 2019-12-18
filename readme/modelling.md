@@ -87,6 +87,7 @@ floyd run --env tensorflow-0.12:py2 \
   --out-path ./output/"
 ```
 Alterar o parametro `--data` para o job gerado no-ponto anterior. Por ex. `hjneves/projects/maat/80/`
+
 Colocar uma imagem para aplicar estilo na directoria `images`
 
 **Nota**: Com o free tier do FloydHub existem limitações no tamanho das imagens a usar como input. Usar imagens até 1024px width.

@@ -12,6 +12,7 @@ Para executar os comandos indicados nestas instruções devera usar um terminal
 ## FloydHub account
 Para a execução dos modelos de deep learning vamos usar a plataforma [Floydhub](https://www.floydhub.com). A plataforma *FloydHub* disponibiliza um acesso a hardware e software pré-configurado para a execução de modelos de deep learning.
 Deverão criar uma conta [aqui](https://www.floydhub.com/signup)
+Para ter horas de processamento no tier free é necessário introduzir um cartão de crédito durante a inscrição. 
 
 
 ## Git
@@ -47,15 +48,4 @@ O virtualenv é um ambiente sandbox que permite a utilização de um conjunto de
 
 - Instalar o floyd-cli: `pip install -U floyd-cli`
 
-## FloydHub commands
-floyd run --env tensorflow-0.12:py2 \\
-  --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models "python evaluate.py \\
-  --allow-different-dimensions  \\
-  --checkpoint /models/wave.ckpt \\
-  --in-path ./images/ \\
-  --out-path ./output/"
 
-
-
-
-> Written with [StackEdit](https://stackedit.io/).

@@ -5,9 +5,9 @@ Não é necessário ter conhecimentos de programação para participar neste wor
 - Python 2 (e PIP)
 - VirtualEnv
 
-Para executar os comandos indicados nestas instruções devera usar um terminal
+Para executar os comandos indicados nestas instruções deverá usar um terminal
 - Em macOS usar o 'terminal'
-- Em Windows usar o 'cmd'
+- Em Windows usar o 'cmd', 'powershell' ou outro editor pelo qual tenha preferência
 
 ## FloydHub account
 Para a execução dos modelos de deep learning vamos usar a plataforma [Floydhub](https://www.floydhub.com). A plataforma *FloydHub* disponibiliza um acesso a hardware e software pré-configurado para a execução de modelos de deep learning.

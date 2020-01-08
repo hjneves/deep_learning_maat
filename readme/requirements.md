@@ -1,5 +1,5 @@
 # Requisitos
-Não é necessário ter conhecimentos de programação para participar neste workshop, mas vai ser necessário instalar algmas peças de software.
+Não é necessário ter conhecimentos de programação para participar neste workshop, mas vai ser necessário instalar algumas peças de software.
 - FloydHub Account
 - Git
 - Python 2 (e PIP)

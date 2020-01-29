@@ -9,7 +9,7 @@
 Para criar um ambiente de trabalho é necessário criar um projecto no floydhub, clonar o repositório que vamos utilizar (fast-style-transfer) e inicializar lá o projecto floydhub criado anteriormente. 
 
 1. Criar projecto com o nome `maat` [aqui](https://www.floydhub.com/projects/create).
-2. Clonar o repositório localmente no computador através do comando `git clone https://github.com/floydhub/fast-style-transfer.git`
+2. Clonar o repositório localmente no computador através do comando `https://github.com/hjneves/fast-style-transfer.git`
 3. Entrar na directoria `cd fast-style-transfer`
 4. Inicializar o projecto floydhub
 	`floyd init hjneves/maat`
@@ -28,8 +28,10 @@ Neste repositório existem os seguintes modelos de estilo pré-definidos:
 |scream.ckpt|
 
 Por exemplo, para aplicar o modelo `wave.ckpt` a uma imagem devem colocar a imagem na pasta `images` e executar o seguinte comando:
-
-
+```
+./evaluate_pre.sh wave.ckpt
+```
+ou
 ```
 floyd run --env tensorflow-0.12:py2 \
 --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models "python evaluate.py \
@@ -46,25 +48,29 @@ Para utilizar outro modelo pré-definido devem substituir `wave.ckpt`por outro m
 Para criar um estilo com base numa nova imagem, é necessário treinar um novo modelo. A imagem será interpretada como o estilo a transferir para outra imagem. O modelo usado é o VGG19. 
 O comando a executar é o seguinte:
 ```
-floyd run --env tensorflow-0.12:py2 \
+./style.sh stylefile [nr iterations]
+```
+ou
+```
+floyd run --gpu --env tensorflow-0.12:py2 \
  --data narenst/datasets/coco-train-2014/1:images \
  --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models \
  --data floydhub/datasets/imagenet-vgg-verydeep-19/3:vgg \
  "python style.py \
  --vgg-path /vgg/imagenet-vgg-verydeep-19.mat \
  --train-path /images/train2014 \
- --style style/imageForStyle.jpg \
- --epoch 2 \
- --total-iterations 500 \
+ --style style/$STYLE_IMAGE \
+ --epoch 1 \
+ --total-iterations $NR_ITERATIONS \
  --checkpoint-dir ./checkpoints"
  ```
 
 Criar a directoria `checkpoints`com um ficheiro dummy, caso não exista.
-Criar a directoria `style` e colocar lá uma imagem que vai ser usada como estilo.
+Criar a directoria `style` e colocar lá uma imagem que vai ser usada como estilo, caso não exista.
 
-Substituir no script o nome `imageForStyle.jpg`pelo nome do ficheiro da imagem
+Substituir no script o nome `$STYLE_IMAGE`pelo nome do ficheiro da imagem
 
-`--total-iterations`define o nº de iterações para o treino do modelo. Um maior nº de iterações leva a uma melhor apreensão do estilo da imagem
+`$NR_ITERATIONS`define o nº de iterações para o treino do modelo. Um maior nº de iterações leva a uma melhor apreensão do estilo da imagem. Começar por exemplo com 500
 
 Outros parâmetros podem ser consultados no script `style.py`ex.
 
@@ -76,17 +82,20 @@ Este comando vai desencadear um job floydhub que após terminar pode ser usado c
 
  ## Aplicar o novo estilo a outras imagens
  Para aplicar o modelo de estilo treinado no ponto anterior deve ser executado o seguinte comando:
-
+```
+evaluate.sh floydjob
+```
+ou
 ```
 floyd run --env tensorflow-0.12:py2 \
-  --data hjneves/projects/maat/53/:input "python evaluate.py \
+  --data $FLOYD_JOB/:input "python evaluate.py \
   --allow-different-dimensions  \
   --checkpoint /input/checkpoints/fns.ckpt \
   --in-path ./images/ \
   --batch-size 1 \
   --out-path ./output/"
 ```
-Alterar o parametro `--data` para o job gerado no-ponto anterior. Por ex. `hjneves/projects/maat/80/`
+Alterar o parametro `$FLOYD_JOB` para o job gerado no-ponto anterior. Por ex. `hjneves/projects/maat/80/`
 
 Colocar uma imagem para aplicar estilo na directoria `images`
 

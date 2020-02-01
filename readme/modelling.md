@@ -1,8 +1,9 @@
 # Criação e aplicação de modelos
 
 ## Login no floydHub
-1. Abrir o dashboard na conta do [floydhub](https://floydhub.com), ou
-2. Executar no terminal o seguinte comando `floyd login`
+1. Activação do ambiente: `source ./floyd/bin/activate`
+2. Abrir o dashboard na conta do [floydhub](https://floydhub.com), ou
+3. Executar no terminal o seguinte comando `floyd login`
 
 ## Criar um projecto no floydhub
 
@@ -12,7 +13,7 @@ Para criar um ambiente de trabalho é necessário criar um projecto no floydhub,
 2. Clonar o repositório localmente no computador através do comando `https://github.com/hjneves/fast-style-transfer.git`
 3. Entrar na directoria `cd fast-style-transfer`
 4. Inicializar o projecto floydhub
-	`floyd init hjneves/maat`
+	`floyd init $USER/maat` em que $USER é o utilizador floydhub
 
 ## Aplicar um modelo pré-definido
 
@@ -95,7 +96,7 @@ floyd run --env tensorflow-0.12:py2 \
   --batch-size 1 \
   --out-path ./output/"
 ```
-Alterar o parametro `$FLOYD_JOB` para o job gerado no-ponto anterior. Por ex. `hjneves/projects/maat/80/`
+Alterar o parametro `$FLOYD_JOB` para o job gerado no-ponto anterior. Por ex. `hjneves/projects/maat/80`
 
 Colocar uma imagem para aplicar estilo na directoria `images`
 
